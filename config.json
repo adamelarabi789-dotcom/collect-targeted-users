@@ -1,0 +1,74 @@
+{
+  "_notes": [
+    "Generic template - replace every value below with your own targets.",
+    "Nothing here is tied to a specific niche or industry.",
+    "search.keywords drives the X search: queries are auto-generated per bucket.",
+    "Alternatively set the X_NICHE_KEYWORDS / X_KEYWORDS_A / X_KEYWORDS_B env vars.",
+    "Copy this file to config.local.json to keep private values out of git.",
+    "See .env.example and README.md for the full key reference."
+  ],
+
+  "search": {
+    "keywords": {
+      "A": ["[INSERT_NICHE_KEYWORDS_A]"],
+      "B": ["[INSERT_NICHE_KEYWORDS_B]"]
+    },
+    "queries": [],
+    "expansionQueries": [],
+    "querySuffix": "-filter:replies",
+    "keywordsFile": "references/keywords.md"
+  },
+
+  "criteria": {
+    "target": 20,
+    "maxFollowers": 40000,
+    "minPosts30d": 8,
+    "minPosts30dFloor": 4,
+    "relax": true,
+    "relaxBelowPct": 0.6,
+    "activityWindowDays": 30,
+    "maxLastPostDays": 7,
+    "concurrency": 5,
+    "maxProfiles": 200,
+    "maxMinutes": 20,
+    "expandRounds": 3,
+    "maxScrollsPerSeed": 16,
+    "maxAuthorsPerSeed": 24,
+    "prefilter": true,
+    "jitterSecs": [1.0, 3.0],
+    "cooldownEvery": 12,
+    "cooldownSecs": [15, 35]
+  },
+
+  "classification": {
+    "roleWeight": 3,
+    "buckets": {
+      "A": {
+        "name": "Target Audience A",
+        "roleTerms": ["[INSERT_ROLE_TERMS_A]"],
+        "strongTerms": ["[INSERT_STRONG_TERMS_A]"],
+        "weakTerms": ["[INSERT_WEAK_TERMS_A]"]
+      },
+      "B": {
+        "name": "Target Audience B",
+        "roleTerms": ["[INSERT_ROLE_TERMS_B]"],
+        "strongTerms": ["[INSERT_STRONG_TERMS_B]"],
+        "weakTerms": ["[INSERT_WEAK_TERMS_B]"]
+      }
+    }
+  },
+
+  "integrity": {
+    "placeholderBios": [],
+    "placeholderFollowers": 100
+  },
+
+  "export": {
+    "mode": "auto",
+    "spreadsheetId": "YOUR_SPREADSHEET_ID",
+    "sheetName": "Targets",
+    "webAppUrl": "",
+    "tokenPath": "~/.config/google-drive-mcp/tokens.json",
+    "localCsv": ""
+  }
+}

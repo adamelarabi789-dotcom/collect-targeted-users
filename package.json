@@ -1,0 +1,32 @@
+{
+  "name": "collect-targeted-users",
+  "version": "1.0.0",
+  "description": "Automated lead-generation scanner for X/Twitter: collects activity-checked profiles matching your configurable niche keywords and criteria into a Google Sheet, with no AI validation step.",
+  "keywords": [
+    "twitter",
+    "x",
+    "playwright",
+    "lead-generation",
+    "scraper",
+    "google-sheets",
+    "outreach"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "scripts/scan-candidates.js",
+  "scripts": {
+    "login": "node First/login.js",
+    "refresh-session": "node First/login.js --refresh",
+    "scan": "node scripts/scan-candidates.js",
+    "collect": "node scripts/scan-candidates.js --target 20",
+    "verify": "node scripts/build-targets.js --target 20 --sync-sheet",
+    "dry-run": "node scripts/scan-candidates.js --target 20 --dry-run --no-sheet",
+    "playwright:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.64.0"
+  }
+}

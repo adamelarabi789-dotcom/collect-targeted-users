@@ -1,0 +1,47 @@
+# --- Secrets & session state (never commit) ---
+.env
+.env.*
+!.env.example
+auth.json
+auth*.json
+!auth.json.example
+sheet-config.json
+sheet-config.local.json
+# Local config override (keep private keywords out of git). config.json itself
+# is tracked so the template is always present.
+config.local.json
+tokens.json
+credentials.json
+client_secret.json
+gcp-oauth.keys.json
+
+# --- Local state / output databases ---
+data/
+logs/
+*.log
+*.new.csv
+*.csv
+!*.example.csv
+!*.example.json
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.pnpm-store/
+
+# --- Playwright ---
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

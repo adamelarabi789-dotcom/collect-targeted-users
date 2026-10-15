@@ -1,0 +1,5 @@
+{
+  "spreadsheetId": "YOUR_SPREADSHEET_ID",
+  "sheetName": "Targets",
+  "tokenPath": "~/.config/google-drive-mcp/tokens.json"
+}

@@ -1,0 +1,10 @@
+# Auto-normalise line endings so the shell scripts stay executable on
+# macOS/Linux while Windows users keep CRLF where it matters.
+* text=auto
+
+*.sh text eol=lf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.ico binary
