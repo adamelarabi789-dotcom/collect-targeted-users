@@ -1,4 +1,5 @@
-# collect-targeted-users
+# This is a free to use skill for tanjawi zaml
+## collect-targeted-users
 
 An automated **lead-generation scanner for X (Twitter)**. In a single, human-paced
 pass it searches X for the accounts **you define** and writes each qualifying
